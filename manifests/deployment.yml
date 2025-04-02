@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: manojraibpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manojraibpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: manojraibpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: manojraibpipelinesjavascriptdocker 
+          image: mycontainerregistri.azurecr.io/manojraibpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
